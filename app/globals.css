@@ -1,26 +1,140 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Ink (dark) surfaces */
+  --ink: #0b0e13;
+  --ink-2: #12161d;
+  --ink-3: #1b2029;
+  --ink-line: rgba(245, 241, 232, 0.1);
+  --ink-line-strong: rgba(245, 241, 232, 0.18);
+
+  /* Paper (warm light) surfaces -- never pure white */
+  --paper: #f4f0e6;
+  --paper-2: #ece5d4;
+  --paper-3: #e2d9c3;
+  --paper-line: rgba(20, 18, 14, 0.1);
+  --paper-line-strong: rgba(20, 18, 14, 0.18);
+
+  /* Text */
+  --text-on-ink: #f4f0e6;
+  --text-on-ink-muted: #a7a196;
+  --text-on-paper: #1a1712;
+  --text-on-paper-muted: #625c4d;
+
+  /* Accents -- primary: plum (brand/CTA), secondary: copper (data/status) */
+  --primary: #7c4088;
+  --primary-strong: #5e2f68;
+  --primary-soft: #ddb9e4;
+  --secondary: #c1602f;
+  --secondary-strong: #a94f24;
+  --secondary-soft: #e7b592;
+
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 28px;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-paper-3: var(--paper-3);
+  --color-primary: var(--primary);
+  --color-primary-strong: var(--primary-strong);
+  --color-primary-soft: var(--primary-soft);
+  --color-secondary: var(--secondary);
+  --color-secondary-strong: var(--secondary-strong);
+  --color-secondary-soft: var(--secondary-soft);
+  --color-text-ink: var(--text-on-ink);
+  --color-text-ink-muted: var(--text-on-ink-muted);
+  --color-text-paper: var(--text-on-paper);
+  --color-text-paper-muted: var(--text-on-paper-muted);
+
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-mono-tech);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--paper);
+  color: var(--text-on-paper);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--paper);
+}
+
+/* Subtle paper grain so flat colour fields don't read as a flat AI gradient */
+.grain {
+  position: relative;
+  isolation: isolate;
+}
+
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+}
+
+/* Scroll-reveal, respects reduced motion */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Focus ring, consistent on both surfaces */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+.text-balance {
+  text-wrap: balance;
 }
