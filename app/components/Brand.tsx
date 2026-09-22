@@ -7,12 +7,20 @@ export function BrandMark({ className = "" }: { className?: string }) {
       aria-hidden
     >
       <path
-        d="M4 22c4-1 6-5 6-9s2-8 6-8 6 4 6 8"
-        stroke="currentColor"
-        strokeWidth="2.2"
+        d="M8 6c7.5 0 12 4.3 12 10s-4.5 10-12 10"
+        stroke="var(--primary)"
+        strokeWidth="3.2"
         strokeLinecap="round"
       />
-      <circle cx="22" cy="13" r="2.6" fill="currentColor" />
+      <rect
+        x="10.4"
+        y="13.4"
+        width="5.2"
+        height="5.2"
+        rx="1.2"
+        transform="rotate(45 13 16)"
+        fill="var(--secondary)"
+      />
     </svg>
   );
 }
@@ -20,7 +28,7 @@ export function BrandMark({ className = "" }: { className?: string }) {
 export function BrandWordmark({ className = "" }: { className?: string }) {
   return (
     <span className={`font-display text-xl tracking-tight ${className}`}>
-      Cauce
+      Devy<span className="text-primary">-Fact</span>
     </span>
   );
 }

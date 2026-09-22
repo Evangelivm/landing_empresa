@@ -32,7 +32,6 @@ export default function WhyUs() {
         <div className="grid gap-16 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <Reveal>
             <SectionHeading
-              eyebrow="Por qué a medida"
               title="El software de catálogo resuelve el 80%. El 20% restante es tu operación."
               description="Ese 20% suele ser justo lo que te hace competitivo: tu forma de fabricar, de dar crédito, de rotar inventario o de facturar. Ahí es donde entramos."
             />

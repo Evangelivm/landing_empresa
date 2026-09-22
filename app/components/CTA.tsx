@@ -23,8 +23,8 @@ export default function CTA() {
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button href="mailto:hola@cauce.io" variant="primary">
-            Escríbenos a hola@cauce.io
+          <Button href="mailto:hola@devyfact.com" variant="primary">
+            Escríbenos a hola@devyfact.com
             <IconArrowUpRight className="h-4 w-4" />
           </Button>
           <Button href="tel:+10000000000" variant="ghost-ink">

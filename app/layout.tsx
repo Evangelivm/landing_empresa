@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
+import { Space_Grotesk, Manrope, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-display-src",
   subsets: ["latin"],
-  axes: ["opsz", "SOFT", "WONK"],
+  weight: ["500", "600", "700"],
 });
 
-const inter = Inter({
-  variable: "--font-inter",
+const manrope = Manrope({
+  variable: "--font-sans-src",
   subsets: ["latin"],
 });
 
@@ -19,12 +19,12 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
-const title = "Cauce — Software a medida y ERP para operaciones reales";
+const title = "Devy-Fact: software a medida y ERP para operaciones reales";
 const description =
   "Diseñamos y construimos ERP y software a medida para empresas que ya no caben en una hoja de cálculo. Arquitectura clara, entregas iterativas y un equipo de ingeniería al que le puedes hablar directamente.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://cauce.io"),
+  metadataBase: new URL("https://devyfact.com"),
   title,
   description,
   openGraph: {
@@ -48,7 +48,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${fraunces.variable} ${inter.variable} ${plexMono.variable} antialiased`}
+      className={`${spaceGrotesk.variable} ${manrope.variable} ${plexMono.variable} antialiased`}
     >
       <body>{children}</body>
     </html>

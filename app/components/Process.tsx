@@ -35,7 +35,6 @@ export default function Process() {
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <Reveal>
           <SectionHeading
-            eyebrow="Cómo trabajamos"
             title="Un método pensado para no sorprenderte a mitad de camino"
             description="Cinco etapas visibles de principio a fin. Sabes en qué semana estás y qué vas a ver en la siguiente demo."
           />

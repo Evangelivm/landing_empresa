@@ -22,11 +22,11 @@ export default function Icon() {
           style={{
             fontSize: 20,
             fontWeight: 700,
-            color: "#ddb9e4",
-            fontFamily: "serif",
+            color: "#afccff",
+            fontFamily: "sans-serif",
           }}
         >
-          C
+          D
         </div>
         <div
           style={{
@@ -36,7 +36,7 @@ export default function Icon() {
             width: 4,
             height: 4,
             borderRadius: 999,
-            background: "#7c4088",
+            background: "#7c3fe0",
           }}
         />
       </div>

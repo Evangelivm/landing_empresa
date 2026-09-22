@@ -84,7 +84,7 @@ export default function Header() {
             className="flex items-center gap-2 text-text-ink"
             onClick={() => setOpen(false)}
           >
-            <BrandMark className="h-7 w-7 text-primary-soft" />
+            <BrandMark className="h-7 w-7" />
             <BrandWordmark />
           </Link>
 

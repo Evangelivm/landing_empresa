@@ -21,11 +21,11 @@ export default function AppleIcon() {
           style={{
             fontSize: 96,
             fontWeight: 700,
-            color: "#ddb9e4",
-            fontFamily: "serif",
+            color: "#afccff",
+            fontFamily: "sans-serif",
           }}
         >
-          C
+          D
         </div>
         <div
           style={{
@@ -35,7 +35,7 @@ export default function AppleIcon() {
             width: 18,
             height: 18,
             borderRadius: 999,
-            background: "#7c4088",
+            background: "#7c3fe0",
           }}
         />
       </div>

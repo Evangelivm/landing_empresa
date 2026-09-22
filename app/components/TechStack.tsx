@@ -31,7 +31,6 @@ export default function TechStack() {
         <Reveal>
           <SectionHeading
             tone="ink"
-            eyebrow="Con qué construimos"
             title="Tecnología probada, no un experimento con tu operación"
             description="Elegimos herramientas maduras y ampliamente documentadas para que tu sistema se pueda mantener y hacer crecer con cualquier equipo de ingeniería, no solo con el nuestro."
           />

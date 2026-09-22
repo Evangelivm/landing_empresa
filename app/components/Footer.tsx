@@ -14,7 +14,7 @@ const COLUMNS = [
   {
     heading: "Contacto",
     links: [
-      { label: "hola@cauce.io", href: "mailto:hola@cauce.io" },
+      { label: "hola@devyfact.com", href: "mailto:hola@devyfact.com" },
       { label: "+1 (000) 000-0000", href: "tel:+10000000000" },
     ],
   },
@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-[1.3fr_1fr_1fr]">
           <div>
             <Link href="#top" className="flex items-center gap-2 text-text-ink">
-              <BrandMark className="h-7 w-7 text-primary-soft" />
+              <BrandMark className="h-7 w-7" />
               <BrandWordmark />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-text-ink-muted">
@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-4 border-t border-[var(--ink-line)] pt-8 text-xs text-text-ink-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Cauce. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Devy-Fact. Todos los derechos reservados.</p>
           <p>Hecho por un equipo que también escribe el código.</p>
         </div>
       </div>

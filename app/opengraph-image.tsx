@@ -35,10 +35,10 @@ export default function OpengraphImage() {
             display: "flex",
             alignItems: "center",
             gap: 14,
-            color: "#ddb9e4",
+            color: "#afccff",
             fontSize: 30,
             fontWeight: 700,
-            fontFamily: "serif",
+            fontFamily: "sans-serif",
           }}
         >
           <div
@@ -46,11 +46,11 @@ export default function OpengraphImage() {
               width: 14,
               height: 14,
               borderRadius: 999,
-              background: "#7c4088",
+              background: "#7c3fe0",
               display: "flex",
             }}
           />
-          Cauce
+          Devy-Fact
         </div>
 
         <div
@@ -61,8 +61,8 @@ export default function OpengraphImage() {
             fontSize: 64,
             lineHeight: 1.15,
             color: "#f4f0e6",
-            fontFamily: "serif",
-            fontWeight: 600,
+            fontFamily: "sans-serif",
+            fontWeight: 700,
           }}
         >
           El software que por fin entiende cómo opera tu empresa.

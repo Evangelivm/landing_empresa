@@ -53,7 +53,6 @@ export default function Services() {
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <Reveal>
           <SectionHeading
-            eyebrow="Qué hacemos"
             title="Un solo equipo, cuatro formas de ordenar tu operación"
             description="No vendemos licencias de un producto rígido. Construimos el sistema alrededor de cómo tu empresa realmente trabaja."
           />

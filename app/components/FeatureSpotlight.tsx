@@ -22,7 +22,7 @@ const TABS = [
     id: "aprobaciones",
     label: "Aprobaciones y flujos",
     description:
-      "Define quién autoriza qué —una compra, un descuento, un ajuste de inventario— y deja que el sistema lo haga cumplir.",
+      "Define quién autoriza qué (una compra, un descuento, un ajuste de inventario) y deja que el sistema lo haga cumplir.",
   },
 ] as const;
 

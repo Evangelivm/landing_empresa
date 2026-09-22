@@ -21,13 +21,13 @@
   --text-on-paper: #1a1712;
   --text-on-paper-muted: #625c4d;
 
-  /* Accents -- primary: plum (brand/CTA), secondary: copper (data/status) */
-  --primary: #7c4088;
-  --primary-strong: #5e2f68;
-  --primary-soft: #ddb9e4;
-  --secondary: #c1602f;
-  --secondary-strong: #a94f24;
-  --secondary-soft: #e7b592;
+  /* Accents -- primary: azure (brand/CTA), secondary: violet (data/status), sampled from the Devy-Fact mark */
+  --primary: #1d6fe0;
+  --primary-strong: #0f4fae;
+  --primary-soft: #afccff;
+  --secondary: #7c3fe0;
+  --secondary-strong: #5b27b0;
+  --secondary-soft: #d6c2ff;
 
   --radius-sm: 6px;
   --radius-md: 14px;
@@ -52,8 +52,8 @@
   --color-text-paper: var(--text-on-paper);
   --color-text-paper-muted: var(--text-on-paper-muted);
 
-  --font-display: var(--font-fraunces);
-  --font-sans: var(--font-inter);
+  --font-display: var(--font-display-src);
+  --font-sans: var(--font-sans-src);
   --font-mono: var(--font-mono-tech);
 
   --radius-sm: var(--radius-sm);
@@ -120,4 +120,15 @@ button {
 
 .text-balance {
   text-wrap: balance;
+}
+
+/* Gentle idle float for the hero brand mark; transform-only, motion-safe: gated */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
 }

@@ -39,7 +39,7 @@ export function Button({
 
   const styles: Record<string, string> = {
     primary:
-      "bg-primary text-paper hover:bg-primary-strong active:scale-[0.98] shadow-[0_8px_24px_-8px_rgba(124,64,136,0.6)]",
+      "bg-primary text-paper hover:bg-primary-strong active:scale-[0.98] shadow-[0_8px_24px_-8px_rgba(29,111,224,0.55)]",
     secondary:
       "border border-[var(--paper-line-strong)] text-text-paper hover:border-primary hover:text-primary-strong",
     "ghost-ink":
@@ -59,16 +59,16 @@ export function SectionHeading({
   description,
   tone = "paper",
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: ReactNode;
   description?: string;
   tone?: "paper" | "ink";
 }) {
   return (
     <div className="max-w-2xl">
-      <Eyebrow tone={tone}>{eyebrow}</Eyebrow>
+      {eyebrow && <Eyebrow tone={tone}>{eyebrow}</Eyebrow>}
       <h2
-        className={`mt-5 font-display text-3xl sm:text-4xl md:text-[2.75rem] leading-[1.08] tracking-tight text-balance ${
+        className={`${eyebrow ? "mt-5" : ""} font-display text-3xl sm:text-4xl md:text-[2.75rem] leading-[1.08] tracking-tight text-balance ${
           tone === "ink" ? "text-text-ink" : "text-text-paper"
         }`}
       >
