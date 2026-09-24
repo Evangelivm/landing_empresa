@@ -28,7 +28,7 @@ export function BrandMark({ className = "" }: { className?: string }) {
 export function BrandWordmark({ className = "" }: { className?: string }) {
   return (
     <span className={`font-display text-xl tracking-tight ${className}`}>
-      Devy<span className="text-primary">-Fact</span>
+      Dvy<span className="text-primary">-Fact</span>
     </span>
   );
 }

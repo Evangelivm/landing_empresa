@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { BrandMark, BrandWordmark } from "./Brand";
 import { IconClose, IconMenu } from "./icons";
+import { WHATSAPP_URL } from "../lib/contact";
 
 const LINKS = [
   { href: "#servicios", label: "Servicios" },
@@ -113,7 +114,9 @@ export default function Header() {
 
           <div className="hidden md:block">
             <Link
-              href="#contacto"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex min-h-[44px] items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-primary-strong"
             >
               Hablemos
@@ -145,7 +148,9 @@ export default function Header() {
                 </Link>
               ))}
               <Link
-                href="#contacto"
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
                 className="mt-3 inline-flex min-h-[44px] items-center justify-center rounded-full bg-primary px-5 py-3 text-sm font-medium text-paper"
               >

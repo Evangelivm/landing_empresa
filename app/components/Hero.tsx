@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button, Eyebrow } from "./ui";
 import { IconArrowUpRight } from "./icons";
+import { WHATSAPP_URL } from "../lib/contact";
 
 export default function Hero() {
   return (
@@ -36,8 +37,8 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
-            <Button href="#contacto" variant="primary">
-              Agenda una consultoría
+            <Button href={WHATSAPP_URL} variant="primary" external>
+              Escríbenos por WhatsApp
               <IconArrowUpRight className="h-4 w-4" />
             </Button>
             <Button href="#proceso" variant="ghost-ink">
@@ -65,8 +66,8 @@ function LogoShowcase() {
           <div className="relative overflow-hidden rounded-[2rem] border border-[var(--ink-line-strong)] bg-ink-2 p-3 shadow-[0_40px_80px_-30px_rgba(0,0,0,0.7)]">
             <div className="relative aspect-square overflow-hidden rounded-[1.5rem]">
               <Image
-                src="/brand/devy-fact-logo.jpg"
-                alt="Devy-Fact"
+                src="/brand/dvy-fact-logo.jpeg"
+                alt="Dvy-Fact"
                 fill
                 priority
                 sizes="(min-width: 1024px) 420px, 320px"

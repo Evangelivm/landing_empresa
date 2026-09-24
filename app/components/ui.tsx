@@ -28,11 +28,13 @@ export function Button({
   children,
   variant = "primary",
   className = "",
+  external = false,
 }: {
   href: string;
   children: ReactNode;
   variant?: "primary" | "secondary" | "ghost-ink";
   className?: string;
+  external?: boolean;
 }) {
   const base =
     "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium transition-all duration-200 ease-out min-h-[44px] focus-visible:outline-2 focus-visible:outline-offset-2";
@@ -47,7 +49,11 @@ export function Button({
   };
 
   return (
-    <Link href={href} className={`${base} ${styles[variant]} ${className}`}>
+    <Link
+      href={href}
+      className={`${base} ${styles[variant]} ${className}`}
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+    >
       {children}
     </Link>
   );

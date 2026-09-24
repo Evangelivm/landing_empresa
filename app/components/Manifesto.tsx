@@ -29,7 +29,7 @@ export default function Manifesto() {
             y quiera seguir usando dentro de tres años.&rdquo;
           </blockquote>
           <p className="mt-5 font-mono text-xs uppercase tracking-[0.2em] text-text-paper-muted">
-            Equipo de ingeniería, Devy-Fact
+            Equipo de ingeniería, Dvy-Fact
           </p>
         </Reveal>
 

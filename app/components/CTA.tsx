@@ -1,5 +1,6 @@
 import { Button, Eyebrow } from "./ui";
-import { IconArrowUpRight } from "./icons";
+import { IconArrowUpRight, IconWhatsapp } from "./icons";
+import { WHATSAPP_URL } from "../lib/contact";
 
 export default function CTA() {
   return (
@@ -18,17 +19,19 @@ export default function CTA() {
         </h2>
 
         <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-text-ink-muted sm:text-lg">
-          Una primera llamada de 30 minutos basta para saber si podemos
-          ayudarte. Sin propuestas genéricas ni presión de venta.
+          Todo el contacto lo llevamos por WhatsApp: una primera llamada de 30
+          minutos basta para saber si podemos ayudarte. Sin propuestas
+          genéricas ni presión de venta.
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <Button href="mailto:hola@devyfact.com" variant="primary">
-            Escríbenos a hola@devyfact.com
+          <Button href={WHATSAPP_URL} variant="primary" external>
+            <IconWhatsapp className="h-4 w-4" />
+            Escríbenos por WhatsApp
             <IconArrowUpRight className="h-4 w-4" />
           </Button>
-          <Button href="tel:+10000000000" variant="ghost-ink">
-            +1 (000) 000-0000
+          <Button href="mailto:hola@dvyfact.com" variant="ghost-ink">
+            Escríbenos a hola@dvyfact.com
           </Button>
         </div>
       </div>

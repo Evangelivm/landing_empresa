@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BrandMark, BrandWordmark } from "./Brand";
-import { IconFacebook, IconInstagram } from "./icons";
+import { IconFacebook, IconInstagram, IconTiktok, IconWhatsapp } from "./icons";
+import { WHATSAPP_URL } from "../lib/contact";
 
 const COLUMNS = [
   {
@@ -15,15 +16,16 @@ const COLUMNS = [
   {
     heading: "Contacto",
     links: [
-      { label: "hola@devyfact.com", href: "mailto:hola@devyfact.com" },
-      { label: "+1 (000) 000-0000", href: "tel:+10000000000" },
+      { label: "hola@dvyfact.com", href: "mailto:hola@dvyfact.com" },
     ],
   },
 ];
 
 const SOCIAL_LINKS = [
-  { label: "Facebook", href: "https://facebook.com/devyfact", icon: IconFacebook },
-  { label: "Instagram", href: "https://instagram.com/devyfact", icon: IconInstagram },
+  { label: "TikTok", href: "https://www.tiktok.com/@dvy.fact?_r=1", icon: IconTiktok },
+  { label: "Instagram", href: "https://www.instagram.com/dvyfact?utm_source=qr&stkn=MWYzMGplN3FyOHdxNA==", icon: IconInstagram },
+  { label: "Facebook", href: "https://www.facebook.com/share/18UnqWPZGz/", icon: IconFacebook },
+  { label: "WhatsApp", href: WHATSAPP_URL, icon: IconWhatsapp },
 ];
 
 export default function Footer() {
@@ -69,6 +71,9 @@ export default function Footer() {
                     <Link
                       href={link.href}
                       className="text-sm text-text-ink-muted transition-colors hover:text-text-ink"
+                      {...("external" in link && link.external
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
                     >
                       {link.label}
                     </Link>
@@ -80,7 +85,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-4 border-t border-[var(--ink-line)] pt-8 text-xs text-text-ink-muted sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Devy-Fact. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Dvy-Fact. Todos los derechos reservados.</p>
           <p>Hecho por un equipo que también escribe el código.</p>
         </div>
       </div>

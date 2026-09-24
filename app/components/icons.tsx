@@ -12,6 +12,8 @@ import {
   ShieldCheck,
   Stack,
   Terminal,
+  TiktokLogo,
+  WhatsappLogo,
   X,
 } from "@phosphor-icons/react/dist/ssr";
 
@@ -75,4 +77,12 @@ export function IconFacebook({ className }: IconProps) {
 
 export function IconInstagram({ className }: IconProps) {
   return <InstagramLogo className={className} weight="regular" />;
+}
+
+export function IconTiktok({ className }: IconProps) {
+  return <TiktokLogo className={className} weight="regular" />;
+}
+
+export function IconWhatsapp({ className }: IconProps) {
+  return <WhatsappLogo className={className} weight="regular" />;
 }

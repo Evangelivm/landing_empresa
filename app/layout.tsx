@@ -19,12 +19,12 @@ const plexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
-const title = "Devy-Fact: software a medida y ERP para operaciones reales";
+const title = "Dvy-Fact: software a medida y ERP para operaciones reales";
 const description =
   "Diseñamos y construimos ERP y software a medida para empresas que ya no caben en una hoja de cálculo. Arquitectura clara, entregas iterativas y un equipo de ingeniería al que le puedes hablar directamente.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://devyfact.com"),
+  metadataBase: new URL("https://dvyfact.com"),
   title,
   description,
   openGraph: {

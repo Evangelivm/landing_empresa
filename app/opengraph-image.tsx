@@ -50,7 +50,7 @@ export default function OpengraphImage() {
               display: "flex",
             }}
           />
-          Devy-Fact
+          Dvy-Fact
         </div>
 
         <div
