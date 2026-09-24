@@ -15,7 +15,7 @@ const STEPS = [
   {
     title: "Desarrollo iterativo",
     description:
-      "Construimos en ciclos de dos semanas con demos funcionales sobre datos reales, no maquetas estáticas.",
+      "Construimos en ciclos cortos definidos según la complejidad de tu proyecto, con demos funcionales sobre datos reales, no maquetas estáticas.",
   },
   {
     title: "Implementación y capacitación",
@@ -36,7 +36,7 @@ export default function Process() {
         <Reveal>
           <SectionHeading
             title="Un método pensado para no sorprenderte a mitad de camino"
-            description="Cinco etapas visibles de principio a fin. Sabes en qué semana estás y qué vas a ver en la siguiente demo."
+            description="Cinco etapas visibles de principio a fin. Sabes en qué etapa estás y qué vas a ver en la siguiente demo."
           />
         </Reveal>
 

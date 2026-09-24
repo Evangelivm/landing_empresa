@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BrandMark, BrandWordmark } from "./Brand";
+import { IconFacebook, IconInstagram } from "./icons";
 
 const COLUMNS = [
   {
@@ -20,6 +21,11 @@ const COLUMNS = [
   },
 ];
 
+const SOCIAL_LINKS = [
+  { label: "Facebook", href: "https://facebook.com/devyfact", icon: IconFacebook },
+  { label: "Instagram", href: "https://instagram.com/devyfact", icon: IconInstagram },
+];
+
 export default function Footer() {
   return (
     <footer className="border-t border-[var(--ink-line)] bg-ink">
@@ -35,6 +41,21 @@ export default function Footer() {
               sistemas a medida para operaciones que ya crecieron más que su
               software.
             </p>
+
+            <div className="mt-6 flex items-center gap-4">
+              {SOCIAL_LINKS.map(({ label, href, icon: Icon }) => (
+                <Link
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
+                  className="text-text-ink-muted transition-colors hover:text-text-ink"
+                >
+                  <Icon className="h-5 w-5" />
+                </Link>
+              ))}
+            </div>
           </div>
 
           {COLUMNS.map((col) => (

@@ -4,22 +4,35 @@ import { SectionHeading } from "./ui";
 const GROUPS = [
   {
     label: "Backend",
-    items: ["Node.js", "TypeScript", "Python", "NestJS"],
+    items: [
+      "Servicios robustos y tipados",
+      "APIs propias, sin dependencia de terceros",
+      "Lógica de negocio auditable",
+    ],
     accent: "text-primary-soft",
   },
   {
     label: "Frontend",
-    items: ["React", "Next.js", "Tailwind CSS"],
+    items: [
+      "Interfaces rápidas y responsivas",
+      "Experiencia consistente en cualquier dispositivo",
+    ],
     accent: "text-secondary-soft",
   },
   {
     label: "Datos",
-    items: ["PostgreSQL", "Redis", "Prisma"],
+    items: [
+      "Bases de datos relacionales robustas",
+      "Respaldos y control de acceso por rol",
+    ],
     accent: "text-primary-soft",
   },
   {
     label: "Infraestructura",
-    items: ["Docker", "AWS", "GitHub Actions"],
+    items: [
+      "Despliegues automatizados y reproducibles",
+      "Entornos aislados de prueba y producción",
+    ],
     accent: "text-secondary-soft",
   },
 ];

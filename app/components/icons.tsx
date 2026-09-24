@@ -3,8 +3,10 @@ import {
   Check,
   Compass,
   Database,
+  FacebookLogo,
   Gauge,
   Handshake,
+  InstagramLogo,
   List,
   Plug,
   ShieldCheck,
@@ -65,4 +67,12 @@ export function IconMenu({ className }: IconProps) {
 
 export function IconClose({ className }: IconProps) {
   return <X className={className} weight="regular" />;
+}
+
+export function IconFacebook({ className }: IconProps) {
+  return <FacebookLogo className={className} weight="regular" />;
+}
+
+export function IconInstagram({ className }: IconProps) {
+  return <InstagramLogo className={className} weight="regular" />;
 }

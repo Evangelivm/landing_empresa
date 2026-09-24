@@ -14,7 +14,7 @@ const ITEMS = [
   {
     icon: IconGauge,
     label: "Entregas medibles",
-    detail: "Demo funcional cada dos semanas, no un PDF de avance",
+    detail: "Demos funcionales en el ritmo que define tu proyecto, no un PDF de avance",
   },
   {
     icon: IconShield,

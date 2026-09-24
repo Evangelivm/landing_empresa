@@ -32,7 +32,7 @@ export default function Hero() {
 
           <p className="mt-7 max-w-xl text-lg leading-relaxed text-text-ink-muted">
             ERP y software a medida para operaciones que no caben en hojas de
-            cálculo. Entregas cada dos semanas, sin intermediarios.
+            cálculo. Entregas con el ritmo que tu proyecto necesita, sin intermediarios.
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
